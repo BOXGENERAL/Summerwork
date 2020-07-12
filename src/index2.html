@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8"/>
+    <title>Add Task</title>
+    <script type="text/javascript" src="data.js"></script>  
+    <style>
+        table, td {
+          border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+  
+  <section>
+  <!-- The header-->
+    <h2 style = "display :incline">Add Task</h2>
+    
+    <!-- The form-->
+    <form style = "display: incline" id="myforms">
+      <!-- The task name form-->
+        <div class="form-group">
+            <label>Task Name</label><br>
+            <input type="text" id="name"/>
+        </div>
+
+        <!--Status of in which if task is complete or incomplete form -->
+        <div class="form-group">
+            <br>
+            <label>Task Status</label><br>
+            <input type="radio" id="status" name="status" value="complete">
+            <label for="complete">Complete</label><br>
+            <input type="radio" id="status" name="status" value ="incomplete">
+            <label for="incomplete">Incomplete</label><br>
+        </div>
+
+        <!-- Form of task start date data-->
+        <div class="form-group">
+            <br>
+            <label>Start Date</label>
+            <input type="date" id="start"/>
+        </div>
+
+        <!--Form of task due date data -->
+        <div class="form-group">
+            <br>
+            <label>Due Date</label>
+            <input type="date" id="due">
+        </div>
+
+        <!--The submit form in which it calls the addData() Function when the button is pressed-->
+        <div class="form-group">
+              <button type="submit" value="submit" onclick="addData()">Submit</button>
+        </div>
+        <div class="form-group">
+            <br>
+            <button type="submit" value="reset" onclick="resetHtml()">Reset</button>
+        </div>
+        <br>
+       </form>
+    </section>
+       <!--The paragraph in which the Javascript displays data-->
+       <p>Data</p>
+       <br>
+       <table id="myTable">
+        <tr>
+          <td>Name</td>
+          <td>Stauts</td>
+          <td>Start Date</td>
+          <td>Due Date</td>
+          <td>Delete Task</td>
+        </tr>
+      </table>
+      <br>
+      
+</body>
+
+
+</html>

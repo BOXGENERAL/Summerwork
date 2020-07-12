@@ -25,6 +25,13 @@
     {
       var i;
       var j;
+      //var x = document.createElement("Button");
+      //var y = document.createTextNode("X");
+      //x.appendChild(y);
+      var button = document.createElement('input');
+      button.setAttribute('type', 'button');
+      button.setAttribute('value', 'Remove');
+      button.setAttribute('onclick', 'removeRow(this)');
       var tempcell=0;
       
 
@@ -41,7 +48,10 @@
         {
           cell1 = row.insertCell(tempcell);
         }
+        
       }
+      cell1 = row.insertCell(4);
+      cell1.appendChild(button);
 
       /*
       var text;
@@ -73,7 +83,11 @@
       }
       */
     }
-
+    function removeRow(oButton) {
+      var empTab = document.getElementById("myTable");
+      empTab.deleteRow(oButton.parentNode.parentNode.rowIndex); // buttton -> td -> tr
+      count = count - 1;
+  }
     function resetHtml()
     {
         location.reload();
