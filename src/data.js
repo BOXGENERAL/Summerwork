@@ -36,6 +36,7 @@
       
 
       var table = document.getElementById("myTable");
+      document.getElementById("myTable").style.textAlign = "center";
       var row = table.insertRow(count2);
       var cell1 = row.insertCell(0);
       console.log(data[0][0]);
@@ -85,6 +86,7 @@
     }
     function removeRow(oButton) {
       var empTab = document.getElementById("myTable");
+      document.getElementById("myTable").style.textAlign = "center";
       empTab.deleteRow(oButton.parentNode.parentNode.rowIndex); // buttton -> td -> tr
       count = count - 1;
   }
