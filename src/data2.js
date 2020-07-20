@@ -2,6 +2,13 @@
     //Function in which it recieves the HTML data nad 
     function addData ()
     {
+
+      
+
+      
+
+
+
       //Prevents HTML from resetting
       event.preventDefault();
       //Gets the form data and stores the value in a variable
@@ -13,7 +20,12 @@
       button.setAttribute('type', 'button');
       button.setAttribute('value', 'Remove');
       button.setAttribute('onclick', 'removeRow(this)');
-      
+      if (due < start)
+      {
+        alert("Invalid Date")
+      }
+      else
+      {
       //count increases by 1 indicating there is more data array list
       count = count + 1; 
       document.getElementById("myforms").reset();
@@ -30,7 +42,7 @@
       cell3.innerHTML = start;
       cell4.innerHTML = due;
       cell5.appendChild(button);
-
+        
     }
     function removeRow(oButton) {
       var empTab = document.getElementById("myTable");
@@ -42,4 +54,4 @@
     {
         location.reload();
     }
-    
+  }
